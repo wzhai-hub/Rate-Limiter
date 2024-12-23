@@ -1,0 +1,32 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  application:
+    name: rate-limiter
+server:
+  port: 8080
+rate-limiter:
+  default:
+    limitPerMinute: 1000 # 默认限流策略（每分钟请求数）
+  users:
+    user1:
+      api1: 10
+      api2: 8000
+      api3: 5000
+    user2:
+      api1: 8000
+      api2: 6000
+      api3: 3000
+    user3:
+      api1: 5000
+      api2: 4000
+      api3: 2000
+logging:
+  level:
+    root: INFO
+    com.homework: DEBUG
+  file:
+    name: logs/application.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
