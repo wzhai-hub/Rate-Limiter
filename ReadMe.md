@@ -16,9 +16,6 @@
 | Test Command    | mvn test               |
 
 
-## API Design Document,same as frontend
-[API Design Document](./APIDesignDocument.pdf)
-
 ## 方案设计
 
 ### 限流器实现：Redis 令牌桶算法
